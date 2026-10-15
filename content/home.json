@@ -1,0 +1,105 @@
+{
+  "_note": "Contenu de la page d'accueil AlloJ. Les champs marqués \"provisoire\": true sont à confirmer avec AlloJ avant toute mise en ligne publique.",
+  "shabbat": {
+    "_note": "Calcul indicatif pour la maquette. À remplacer par la source officielle (API horaires) avec choix de la ville.",
+    "parasha": "Noa'h",
+    "ville": "Paris",
+    "allumage": "ven. 16 oct. 18h42",
+    "sortie": "sam. 17 oct. 19h46"
+  },
+  "hero": {
+    "tag": "✨ Le guide de la communauté",
+    "titre_ligne1": "allô ? 👋",
+    "titre_ligne2_avant": "ici toute la",
+    "titre_ligne2_surligne": "vie juive.",
+    "sous_titre": "Restaurants cacher, séjours, réceptions, immobilier en Israël : tout est sur AlloJ, en France et partout dans le monde.",
+    "recherche_placeholder": "Restaurants, voyages, traiteurs…",
+    "villes": ["Paris", "Tel Aviv", "Jérusalem", "New York"],
+    "collage": [
+      { "src": "/images/live-tchik-tchak.jpg", "alt": "Reportage Alloj Le Live : Tchik Tchak, la nouvelle adresse" },
+      { "src": "/images/live-enveloppe.jpg", "alt": "Micro-trottoir Alloj Le Live : l'enveloppe m'intéresse pas" },
+      { "src": "/images/live-tournage.jpg", "alt": "Tournage d'Alloj Le Live devant le néon AlloJ" }
+    ],
+    "bulles": ["🍕 Golden Pizza vient d'ouvrir !", "✈️ Pessah 2027 ouvert"]
+  },
+  "reseaux": [
+    { "nom": "Instagram", "url": "https://www.instagram.com/alloj_officiel/" },
+    { "nom": "TikTok", "url": "https://www.tiktok.com/@alloj.officiel" },
+    { "nom": "YouTube", "url": "#", "_note": "URL de la chaîne Alloj Le Live à fournir" }
+  ],
+  "ticker": [
+    "🍕 Golden Pizza vient d'ouvrir aux Lilas",
+    "✈️ Pessah 2027 : les séjours sont en ligne",
+    "🎬 Nouvel épisode Alloj Le Live",
+    "🕯️ Chabbat Noa'h : allumage 18h42 à Paris",
+    "🏡 Projet Vue Mer 2 à Netanya",
+    "🎉 Alloj Events, l'évènement tant attendu"
+  ],
+  "compteurs": [
+    { "emoji": "👀", "valeur": 600000, "affichage": "600 k", "label": "vues d'Alloj cumulées par mois" },
+    { "emoji": "📸", "valeur": 44600, "affichage": "44,6 k", "label": "abonnés sur Instagram" },
+    { "emoji": "🎵", "valeur": 67200, "affichage": "67,2 k", "label": "j'aime sur TikTok" },
+    { "emoji": "💻", "valeur": 250000, "affichage": "250 k", "label": "visites par mois sur alloj.com", "provisoire": true },
+    { "emoji": "🍽️", "valeur": 3500, "affichage": "3 500", "label": "établissements référencés", "provisoire": true }
+  ],
+  "rubriques": [
+    { "emoji": "🍽️", "titre": "Restaurants", "sous": "Paris, Israël, USA, Europe", "href": "/restaurants", "img": "/images/resto-noilly.jpg", "alt": "Reportage AlloJ devant une brasserie" },
+    { "emoji": "✈️", "titre": "Voyages", "sous": "Pessah, Souccot, été, ski", "href": "/voyages", "img": "/images/sejour-mykonos.jpg", "alt": "Sky Event à Mykonos, août 2026" },
+    { "emoji": "🥂", "titre": "Réceptions", "sous": "Salles, traiteurs, DJ, photographes", "href": "#", "img": "/images/live-elegance-traiteur.jpg", "alt": "24h avec Élégance Traiteur pendant une réception" },
+    { "emoji": "🕍", "titre": "Vie juive", "sous": "Synagogues, mikvés, écoles", "href": "#", "img": "/images/live-synagogue.jpg", "alt": "Reportage sur une synagogue sauvée" },
+    { "emoji": "🏡", "titre": "Immobilier", "sous": "Acheter ou louer en Israël", "href": "#", "img": "/images/immo-vue-mer.jpg", "alt": "Projet immobilier Vue Mer 2 à Netanya" },
+    { "emoji": "🇮🇱", "titre": "Israël", "sous": "Tel Aviv, Jérusalem, Netanya", "href": "#", "img": "/images/israel-micro.jpg", "alt": "À vous le micro by AlloJ : ton restaurant préféré en Israël ?" },
+    { "emoji": "🇺🇸", "titre": "USA", "sous": "New York, Miami, Los Angeles", "href": "#", "img": "/images/usa-kosh.jpg", "alt": "AlloJ aux États-Unis, devant le restaurant Kosh Sushi & Grill" },
+    { "emoji": "🎉", "titre": "Évènements", "sous": "Alloj Events, salons, soirées", "href": "#", "img": "/images/alloj-events-teaser.jpg", "alt": "Alloj Events, l'évènement tant attendu" }
+  ],
+  "restaurants": [
+    { "emoji": "🍷", "nom": "Gilda", "lieu": "Paris 17e", "certification": "Beth-Din de Paris", "type": "Israélien", "img": "/images/gilda.jpg", "alt": "Salle du restaurant Gilda, banquettes orange et caves à vin", "provisoire": ["lieu", "certification", "type"] },
+    { "emoji": "🥙", "nom": "Levinsky", "lieu": "Paris 16e", "certification": "Beth-Din de Paris", "type": "Israélien", "img": "/images/levinsky.jpg", "alt": "Pitas, frites et salades de Levinsky", "provisoire": ["lieu"] },
+    { "emoji": "🍕", "nom": "Golden Pizza", "lieu": "Les Lilas", "certification": "Rabbinat Loubavitch", "type": "Pizza", "img": "/images/golden-pizza.jpg", "alt": "Pizzas, salade et poké bowl de Golden Pizza", "provisoire": ["certification"] },
+    { "emoji": "🥪", "nom": "LeaHava", "lieu": "Paris 4e", "certification": "Rav Rottenberg", "type": "Sandwicherie", "img": "/images/leahava.jpg", "alt": "Sandwich garni et salade chez LeaHava", "provisoire": ["lieu", "type"] }
+  ],
+  "sejours": [
+    { "emoji": "🍷", "nom": "Pessah 2027", "dates": "Du 20 avril au 2 mai 2027", "dates_courtes": "20 avril → 2 mai 2027", "detail": "Hôtels club en Europe et en Israël", "img": "/images/pessah-seder.jpg", "alt": "Table du Séder de Pessah dressée avec matsot et plateau" },
+    { "emoji": "🌿", "nom": "Souccot 2027", "dates": "Du 15 au dimanche 24 octobre 2027", "dates_courtes": "15 → dim. 24 oct. 2027", "detail": "Soucca, animations, plage", "img": "/images/souccot.jpg", "alt": "Table dressée dans une soucca ensoleillée" },
+    { "emoji": "☀️", "nom": "Été 2027", "dates": "Juillet et août 2027", "dates_courtes": "Juillet → août 2027", "detail": "Clubs, villas, croisières", "img": "/images/ete-piscine.jpg", "alt": "Piscine d'hôtel bordée de palmiers" },
+    { "emoji": "⛷️", "nom": "Ski 2026-27", "dates": "De décembre à mars", "dates_courtes": "Décembre → mars", "detail": "Chalets et hôtels cacher", "img": "/images/ski.jpg", "alt": "Skieur en plein saut au-dessus des sommets enneigés" }
+  ],
+  "live": {
+    "titre": "600 k vues",
+    "titre_surligne": "par mois.",
+    "texte": "🎤 Reportages, micro-trottoirs, « 24h avec » : l'émission qui fait parler la communauté, sur Instagram, TikTok et YouTube.",
+    "videos": [
+      { "img": "/images/live-tchik-tchak.jpg", "titre": "Tchik Tchak, la nouvelle adresse", "format": "📍 Bonne adresse" },
+      { "img": "/images/live-enveloppe.jpg", "titre": "« L'enveloppe m'intéresse pas »", "format": "🎤 Micro-trottoir" },
+      { "img": "/images/live-bebe-nature.jpg", "titre": "24h avec Bébé Nature", "format": "⏱️ 24h avec" },
+      { "img": "/images/live-elegance-traiteur.jpg", "titre": "24h avec Élégance Traiteur", "format": "⏱️ 24h avec" },
+      { "img": "/images/live-synagogue.jpg", "titre": "Elle a sauvé cette synagogue", "format": "📰 Reportage" }
+    ]
+  },
+  "annonces": [
+    { "tag": "🏡 IMMOBILIER · NETANYA", "titre": "Projet Vue Mer 2, Park Hayam", "img": "/images/immo-vue-mer.jpg", "alt": "Projet Vue Mer 2 à Park Hayam, Netanya", "object_position": "center 35%" },
+    { "tag": "🔑 IMMOBILIER · ISRAËL", "titre": "Devenir propriétaire avec 60 000 €", "img": "/images/immo-60000.jpg", "alt": "Devenir propriétaire en Israël avec 60 000 €", "object_position": "center 30%" }
+  ],
+  "annonce_cta": {
+    "titre": "Une annonce à passer ?",
+    "texte": "Location, vente, emploi, événement : publiez-la auprès de toute la communauté AlloJ.",
+    "categories": ["🏠 Immobilier", "💼 Emploi", "🛍️ Ventes", "🎉 Événements"]
+  },
+  "partenaires": ["Briga Real Estate", "Isa Group", "White and Blue", "Sarah Tours", "Kangourou Club", "King David Prague", "InterContinental Paris Champs-Élysées", "Château Barthélemy", "Le Moulin de Fourcon", "Mike Pictures", "Bassari", "Halavi", "Rabbinat de France", "Beth-Din de Paris"],
+  "annonceurs": {
+    "tag": "💜 ANNONCEURS",
+    "titre": "une solution complète pour booster votre entreprise.",
+    "texte": "Fiche établissement, mise en avant sur le site et l'appli, reportage vidéo dans Alloj Le Live : on fait connaître votre activité à toute la communauté.",
+    "bulle": "🚀 +600 k vues / mois",
+    "img": "/images/alloj-events-equipe.jpg",
+    "alt": "L'équipe AlloJ au salon Alloj Events",
+    "telephone": "01 85 61 27 70",
+    "telephone_href": "tel:+33185612770"
+  },
+  "app": {
+    "titre": "📱 L'appli AlloJ",
+    "texte": "Restos, horaires de Chabbat et bons plans, toujours dans la poche.",
+    "app_store": "#",
+    "google_play": "#"
+  }
+}

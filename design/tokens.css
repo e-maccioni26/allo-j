@@ -1,0 +1,58 @@
+/* AlloJ, tokens de design extraits de la maquette validée.
+   Violet #3E0095 = couleur exacte du logo (picto). */
+:root {
+  /* Couleurs */
+  --aj-violet: #3E0095;        /* primaire : boutons, titres de chiffres, fonds hero / CTA */
+  --aj-violet-vif: #7B4BFF;    /* accent (tags, badges). Texte blanc dessus seulement en gras ≥ 13px */
+  --aj-violet-nuit: #1E0049;   /* bandeau Chabbat, section Live, footer */
+  --aj-violet-texte: #6A3BF0;  /* petits libellés violets sur fond blanc (contraste AA) */
+  --aj-lilas: #E2B4F0;         /* ticker, bulles, accents doux */
+  --aj-lilas-fond: #F6F1FF;    /* fonds de sections alternées */
+  --aj-lilas-chip: #F1EAFF;    /* puces / badges secondaires */
+  --aj-bordure: #ECE6F5;
+  --aj-gris-picto: #D3D3D3;
+  --aj-encre: #17102A;         /* texte principal */
+  --aj-texte-2: #4A4360;       /* texte secondaire */
+  --aj-texte-3: #5B5470;       /* noms partenaires */
+  --aj-texte-sur-violet: #E9E0FF;
+  --aj-texte-sur-nuit: #DCD0FA;
+
+  /* Typo : Nunito (Google Fonts), poids 400 / 600 / 700 / 800 / 900 */
+  --aj-font: 'Nunito', ui-rounded, 'Segoe UI', system-ui, sans-serif;
+  --aj-h1: clamp(46px, 6vw, 86px);   /* 900, letter-spacing -2.5px, line-height 1.02, minuscules */
+  --aj-h2: clamp(36px, 4vw, 56px);   /* 900, letter-spacing -1.5px, line-height 1.05, minuscules + point final */
+  --aj-chiffre: 54px;                /* 900, -1.5px */
+
+  /* Formes */
+  --aj-radius-card: 22px;
+  --aj-radius-input: 20px;
+  --aj-radius-pill: 999px;
+  --aj-shadow-card-hover: 0 22px 44px rgba(62, 0, 149, .22);
+  --aj-shadow-photo: 0 20px 40px rgba(10, 0, 40, .4);
+
+  /* Mise en page */
+  --aj-container: 1280px;
+  --aj-gutter: 32px;   /* 16px sous 640px */
+  --aj-section-y: 80px; /* 36px sur mobile */
+
+  /* Mouvement */
+  --aj-ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Signature visuelle : « étiquette surlignée » façon stories Instagram AlloJ.
+   Fond plein, texte 900 en capitales, pas d'arrondi. */
+.aj-tag { background: var(--aj-violet); color: #fff; padding: 5px 14px; font-weight: 900; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
+.aj-surligne { background: #fff; color: var(--aj-violet); padding: 0 .16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Animations de la maquette (à reproduire) */
+@keyframes aj-up { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: none } }
+@keyframes aj-float { 0%, 100% { translate: 0 0 } 50% { translate: 0 -14px } }
+@keyframes aj-wave { 0%, 60%, 100% { rotate: 0deg } 10%, 30% { rotate: 14deg } 20%, 40% { rotate: -8deg } }
+@keyframes aj-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+@keyframes aj-pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .7) } 100% { box-shadow: 0 0 0 16px rgba(255, 255, 255, 0) } }
+@keyframes aj-blink { 0%, 100% { opacity: 1 } 50% { opacity: .25 } }
+@keyframes aj-pop { from { opacity: 0; transform: scale(.6) } to { opacity: 1; transform: none } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

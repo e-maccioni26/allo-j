@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AlloJ · Accueil mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap">
+<style>
+body{margin:0;font-family:'Nunito',ui-rounded,'Segoe UI',system-ui,sans-serif;color:#17102A;background:#fff}
+*{box-sizing:border-box}
+a{color:#3E0095}a:hover{color:#7B4BFF}
+@keyframes aj-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes aj-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes aj-wave{0%,60%,100%{rotate:0deg}10%,30%{rotate:14deg}20%,40%{rotate:-8deg}}
+@keyframes aj-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes aj-pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}100%{box-shadow:0 0 0 12px rgba(255,255,255,0)}}
+@keyframes aj-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes aj-pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.aj-up{animation:aj-up .8s cubic-bezier(.2,.7,.2,1) both}
+.aj-d1{animation-delay:.12s}.aj-d2{animation-delay:.24s}.aj-d3{animation-delay:.36s}.aj-d4{animation-delay:.48s}
+.aj-float{animation:aj-float 6s ease-in-out infinite}
+.aj-float2{animation:aj-float 7s ease-in-out -3s infinite}
+.aj-wave{display:inline-block;transform-origin:70% 80%;animation:aj-wave 2.6s ease-in-out infinite}
+.aj-track{display:flex;width:max-content;animation:aj-marquee 30s linear infinite}
+.aj-track-slow{display:flex;width:max-content;animation:aj-marquee 45s linear infinite}
+.aj-pulse{animation:aj-pulse 1.8s ease-out infinite}
+.aj-blink{animation:aj-blink 1.2s ease-in-out infinite}
+.aj-btn{transition:transform .2s}
+.aj-btn:active{transform:scale(.96)}
+@supports (animation-timeline: view()){
+.aj-rv{animation:aj-up linear both;animation-timeline:view();animation-range:entry 5% cover 30%}
+.aj-pop{animation:aj-pop linear both;animation-timeline:view();animation-range:entry 10% cover 30%}
+}
+@media (prefers-reduced-motion: reduce){
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</helmet>
+<div style="width: 390px; font-family: 'Nunito', ui-rounded, system-ui, sans-serif; color: #17102A; background: #fff; overflow: hidden">
+
+<div style="background: #1E0049; color: #fff; font-size: 13px; padding: 9px 16px; display: flex; justify-content: space-between; gap: 8px">
+<span><strong style="color: #E2B4F0">🕯️ Chabbat · Paris</strong> 18h42 → 19h46</span>
+<a href="#" style="color: #fff; font-weight: 800">📍 Ville</a>
+</div>
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid #ECE6F5">
+<a href="#" style="display: flex; align-items: center; gap: 8px; text-decoration: none">
+<img class="aj-wave" src="/images/picto-alloj.png" alt="" style="height: 38px; width: auto">
+<span style="font-weight: 900; font-size: 26px; color: #3E0095; letter-spacing: -1px">alloj</span>
+</a>
+<div style="display: flex; gap: 4px">
+<button type="button" aria-label="Rechercher" style="width: 44px; height: 44px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17102A" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></button>
+<button class="aj-btn" type="button" aria-label="Menu" style="width: 44px; height: 44px; border: 0; background: #3E0095; border-radius: 12px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path></svg></button>
+</div>
+</header>
+
+<section style="position: relative; background: #3E0095; color: #fff; padding: 32px 16px 36px; overflow: hidden">
+<span aria-hidden="true" class="aj-float2" style="position: absolute; right: -90px; top: -90px; width: 240px; height: 240px; border-radius: 50%; background: #5A1FC0; opacity: 0.6"></span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+<span class="aj-up" style="background: #7B4BFF; padding: 5px 12px; font-weight: 900; font-size: 12px; letter-spacing: 1.5px">✨ LE GUIDE DE LA COMMUNAUTÉ</span>
+<h1 class="aj-up aj-d1" style="margin: 0; font-weight: 900; font-size: 46px; line-height: 1.02; letter-spacing: -1.5px">allô ? <span class="aj-wave" aria-hidden="true">👋</span><br>ici toute la <span style="background: #fff; color: #3E0095; padding: 0 8px; -webkit-box-decoration-break: clone; box-decoration-break: clone">vie juive.</span></h1>
+<p class="aj-up aj-d2" style="margin: 0; font-size: 17px; line-height: 1.45; color: #E9E0FF">Restos, séjours, réceptions, vie juive et immobilier, en France et dans le monde.</p>
+<form class="aj-up aj-d3" role="search" style="width: 100%; background: #fff; border-radius: 18px; padding: 6px; display: flex; flex-direction: column; gap: 6px">
+<label for="qm" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Que cherchez-vous ?</label>
+<input id="qm" type="search" placeholder="🔍 Restaurants, voyages, traiteurs…" style="border: 0; outline: none; font: inherit; font-size: 16px; font-weight: 700; padding: 0 12px; min-height: 50px; color: #17102A">
+<button class="aj-btn" type="submit" style="border: 0; background: #3E0095; color: #fff; font: inherit; font-weight: 900; font-size: 16px; min-height: 50px; border-radius: 14px">Rechercher à Paris</button>
+</form>
+<div class="aj-up aj-d4" style="display: flex; gap: 12px; align-items: center">
+<span style="font-weight: 800; font-size: 15px; color: #E9E0FF">Suivez-nous</span>
+<a class="aj-btn" href="#" aria-label="AlloJ sur Instagram" style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a>
+<a class="aj-btn" href="#" aria-label="AlloJ sur TikTok" style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.5 2.8 2.3 4.5 5 4.8"></path></svg></a>
+<a class="aj-btn" href="#" aria-label="Alloj Le Live sur YouTube" style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9.5v5l4.5-2.5z" fill="#fff"></path></svg></a>
+</div>
+</div>
+</section>
+
+<div aria-label="Actualités AlloJ" style="background: #E2B4F0; color: #2A0068; overflow: hidden">
+<div class="aj-track" style="padding: 12px 0; font-weight: 900; font-size: 15px; white-space: nowrap">
+<sc-for list="{{tickerTwice}}" as="t" hint-placeholder-count="12"><span style="padding: 0 20px">{{t}}</span></sc-for>
+</div>
+</div>
+
+<section aria-label="AlloJ en chiffres" style="padding: 28px 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px">
+<div class="aj-pop" style="border-top: 4px solid #3E0095; padding-top: 10px"><div aria-hidden="true" style="font-size: 24px; margin-bottom: 6px">👀</div><div style="font-weight: 900; font-size: 36px; color: #3E0095; letter-spacing: -1px; line-height: 1">600 k</div><div style="margin-top: 4px; font-weight: 700; color: #4A4360; font-size: 14px">vues cumulées par mois</div></div>
+<div class="aj-pop" style="border-top: 4px solid #3E0095; padding-top: 10px"><div aria-hidden="true" style="font-size: 24px; margin-bottom: 6px">📸</div><div style="font-weight: 900; font-size: 36px; color: #3E0095; letter-spacing: -1px; line-height: 1">44,6 k</div><div style="margin-top: 4px; font-weight: 700; color: #4A4360; font-size: 14px">abonnés Instagram</div></div>
+<div class="aj-pop" style="border-top: 4px solid #3E0095; padding-top: 10px"><div aria-hidden="true" style="font-size: 24px; margin-bottom: 6px">🎵</div><div style="font-weight: 900; font-size: 36px; color: #3E0095; letter-spacing: -1px; line-height: 1">67,2 k</div><div style="margin-top: 4px; font-weight: 700; color: #4A4360; font-size: 14px">j'aime TikTok</div></div>
+<div class="aj-pop" style="border-top: 4px solid #3E0095; padding-top: 10px"><div aria-hidden="true" style="font-size: 24px; margin-bottom: 6px">🍽️</div><div style="font-weight: 900; font-size: 36px; color: #3E0095; letter-spacing: -1px; line-height: 1">3 500</div><div style="margin-top: 4px; font-weight: 700; color: #4A4360; font-size: 14px">établissements</div></div>
+</section>
+
+<section style="background: #F6F1FF; padding: 36px 16px; display: flex; flex-direction: column; gap: 18px">
+<div class="aj-rv" style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+<span style="background: #3E0095; color: #fff; padding: 4px 10px; font-weight: 900; font-size: 12px; letter-spacing: 1.5px">🧭 RUBRIQUES</span>
+<h2 style="margin: 0; font-weight: 900; font-size: 32px; letter-spacing: -1px">on vous trouve tout.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<sc-for list="{{rubriques}}" as="r" hint-placeholder-count="8">
+<a class="aj-rv aj-btn" href="#" style="position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; text-decoration: none; background: repeating-linear-gradient(135deg, #E9DFFB 0 12px, #E1D4F8 12px 24px)">
+<sc-if value="{{r.img}}" hint-placeholder-val="{{true}}"><img src="{{r.img}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+<span aria-hidden="true" style="position: absolute; top: 8px; left: 8px; width: 38px; height: 38px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 19px; box-shadow: 0 6px 14px rgba(20,0,60,0.25)">{{r.emoji}}</span>
+<span style="position: absolute; inset: auto 0 0 0; height: 60%; background: linear-gradient(to top, rgba(20,0,60,0.8), rgba(20,0,60,0))"></span>
+<span style="position: absolute; left: 10px; bottom: 10px; background: #fff; color: #3E0095; padding: 3px 8px; font-weight: 900; font-size: 15px; text-transform: uppercase">{{r.titre}}</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 36px 0 36px 16px; display: flex; flex-direction: column; gap: 18px">
+<div class="aj-rv" style="display: flex; justify-content: space-between; align-items: flex-end; padding-right: 16px">
+<h2 style="margin: 0; font-weight: 900; font-size: 30px; letter-spacing: -1px; line-height: 1.05">🔥 nouveaux<br>restaurants.</h2>
+<a href="#" style="font-weight: 900; font-size: 15px; padding: 10px 0">Voir tout →</a>
+</div>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding-right: 16px; scroll-snap-type: x mandatory">
+<sc-for list="{{restos}}" as="r" hint-placeholder-count="4">
+<article class="aj-rv" style="flex: 0 0 260px; border: 1px solid #ECE6F5; border-radius: 18px; overflow: hidden; scroll-snap-align: start">
+<div style="position: relative; aspect-ratio: 4 / 3; background: repeating-linear-gradient(135deg, #F1EAFF 0 12px, #E9DFFB 12px 24px)">
+<sc-if value="{{r.img}}" hint-placeholder-val="{{false}}"><img src="{{r.img}}" alt="{{r.nom}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+<span aria-hidden="true" style="position: absolute; left: 10px; top: 10px; width: 36px; height: 36px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px">{{r.emoji}}</span>
+<span style="position: absolute; right: 10px; bottom: 10px; background: #7B4BFF; color: #fff; font-weight: 900; font-size: 11px; letter-spacing: 1px; padding: 3px 8px">✨ NOUVEAU</span>
+</div>
+<div style="padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-weight: 900; font-size: 19px">{{r.nom}}</h3>
+<span style="font-weight: 700; font-size: 14px; color: #4A4360">📍 {{r.lieu}} · {{r.type}}</span>
+<span style="align-self: flex-start; border: 2px solid #3E0095; color: #3E0095; border-radius: 999px; padding: 2px 10px; font-weight: 800; font-size: 12px">✡︎ {{r.cert}}</span>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section style="background: #F6F1FF; padding: 36px 0 36px 16px; display: flex; flex-direction: column; gap: 18px">
+<div class="aj-rv" style="display: flex; justify-content: space-between; align-items: flex-end; padding-right: 16px">
+<h2 style="margin: 0; font-weight: 900; font-size: 30px; letter-spacing: -1px; line-height: 1.05">✈️ prochains<br>séjours.</h2>
+<a href="#" style="font-weight: 900; font-size: 15px; padding: 10px 0">Voir tout →</a>
+</div>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding-right: 16px; scroll-snap-type: x mandatory">
+<sc-for list="{{sejours}}" as="s" hint-placeholder-count="4">
+<a class="aj-rv" href="#" style="position: relative; flex: 0 0 240px; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; scroll-snap-align: start; background: repeating-linear-gradient(135deg, #D9C9F6 0 12px, #CFBDF2 12px 24px)">
+<sc-if value="{{s.img}}" hint-placeholder-val="{{false}}"><img src="{{s.img}}" alt="{{s.nom}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+<span aria-hidden="true" style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px">{{s.emoji}}</span>
+<span style="position: relative; margin: auto 10px 10px; background: #fff; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+<span style="align-self: flex-start; background: #3E0095; color: #fff; padding: 2px 8px; font-weight: 900; font-size: 15px; text-transform: uppercase">{{s.nom}}</span>
+<span style="font-weight: 900; font-size: 15px; color: #17102A">📅 {{s.dates}}</span>
+</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section style="background: #1E0049; color: #fff; padding: 40px 0 40px 16px; display: flex; flex-direction: column; gap: 18px">
+<div class="aj-rv" style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding-right: 16px">
+<span style="background: #7B4BFF; padding: 4px 10px; font-weight: 900; font-size: 12px; letter-spacing: 1.5px; display: flex; align-items: center; gap: 6px"><span class="aj-blink" style="width: 7px; height: 7px; border-radius: 50%; background: #FF5C8A"></span>🎬 ALLOJ LE LIVE</span>
+<h2 style="margin: 0; font-weight: 900; font-size: 32px; letter-spacing: -1px; line-height: 1.05">600 k vues <span style="background: #fff; color: #3E0095; padding: 0 6px">par mois.</span></h2>
+</div>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding-right: 16px; scroll-snap-type: x mandatory">
+<sc-for list="{{videos}}" as="v" hint-placeholder-count="4">
+<a class="aj-rv" href="#" style="flex: 0 0 170px; display: flex; flex-direction: column; gap: 8px; color: #fff; text-decoration: none; scroll-snap-align: start">
+<span style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden">
+<img src="{{v.img}}" alt="{{v.titre}}" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<span class="aj-pulse" style="position: absolute; left: 10px; top: 10px; width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#3E0095" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+</span>
+<span style="font-weight: 800; font-size: 14px; line-height: 1.3">{{v.titre}}</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 36px 16px; display: flex; flex-direction: column; gap: 16px">
+<h2 class="aj-rv" style="margin: 0; font-weight: 900; font-size: 30px; letter-spacing: -1px">📣 annonces.</h2>
+<article class="aj-rv" style="display: flex; gap: 12px; align-items: center; border: 1px solid #ECE6F5; border-radius: 16px; padding: 10px">
+<img src="/images/immo-vue-mer.jpg" alt="Projet Vue Mer 2, Netanya" style="width: 88px; height: 88px; object-fit: cover; border-radius: 12px">
+<div><span style="font-weight: 900; font-size: 12px; letter-spacing: 1px; color: #6A3BF0">🏡 IMMOBILIER · NETANYA</span><h3 style="margin: 4px 0 0; font-weight: 900; font-size: 17px">Projet Vue Mer 2, Park Hayam</h3></div>
+</article>
+<article class="aj-rv" style="display: flex; gap: 12px; align-items: center; border: 1px solid #ECE6F5; border-radius: 16px; padding: 10px">
+<img src="/images/immo-60000.jpg" alt="Devenir propriétaire avec 60 000 €" style="width: 88px; height: 88px; object-fit: cover; border-radius: 12px">
+<div><span style="font-weight: 900; font-size: 12px; letter-spacing: 1px; color: #6A3BF0">🔑 IMMOBILIER · ISRAËL</span><h3 style="margin: 4px 0 0; font-weight: 900; font-size: 17px">Devenir propriétaire avec 60 000 €</h3></div>
+</article>
+<a class="aj-btn" href="#" style="text-align: center; border: 2px solid #3E0095; border-radius: 999px; padding: 13px; font-weight: 900; font-size: 16px; text-decoration: none">📢 Déposer une annonce</a>
+</section>
+
+<section aria-label="Partenaires" style="padding: 28px 0; border-top: 1px solid #ECE6F5; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; padding: 0 16px; font-weight: 900; font-size: 22px">🤝 ils nous font confiance.</h2>
+<div style="overflow: hidden">
+<div class="aj-track-slow" style="font-weight: 900; font-size: 17px; color: #5B5470; white-space: nowrap">
+<sc-for list="{{partenairesTwice}}" as="p" hint-placeholder-count="16"><span style="padding: 0 18px">{{p}} <span aria-hidden="true" style="color: #C9B5FF; padding-left: 18px">✦</span></span></sc-for>
+</div>
+</div>
+</section>
+
+<section style="background: #3E0095; color: #fff; padding: 36px 16px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start">
+<div class="aj-rv" style="position: relative; width: 100%">
+<img src="/images/alloj-events-equipe.jpg" alt="L'équipe AlloJ au salon Alloj Events" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px">
+<span class="aj-float" style="position: absolute; right: 8px; bottom: -14px; background: #E2B4F0; color: #2A0068; border-radius: 14px; padding: 8px 12px; font-weight: 900; font-size: 14px">🚀 +600 k vues / mois</span>
+</div>
+<span style="margin-top: 8px; background: #fff; color: #3E0095; padding: 4px 10px; font-weight: 900; font-size: 12px; letter-spacing: 1.5px">💜 ANNONCEURS</span>
+<h2 style="margin: 0; font-weight: 900; font-size: 30px; letter-spacing: -1px; line-height: 1.08">une solution complète pour booster votre entreprise.</h2>
+<a class="aj-btn" href="#" style="width: 100%; text-align: center; background: #fff; color: #3E0095; font-weight: 900; font-size: 17px; padding: 15px; border-radius: 999px; text-decoration: none">Demander un devis</a>
+<a href="tel:+33185612770" style="width: 100%; text-align: center; color: #fff; font-weight: 900; font-size: 17px; padding: 8px">📞 01 85 61 27 70</a>
+</section>
+
+<section style="background: #F6F1FF; padding: 28px 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 12px; align-items: center"><img class="aj-float" src="/images/picto-alloj.png" alt="" style="width: 52px; height: auto"><h2 style="margin: 0; font-weight: 900; font-size: 22px">📱 L'appli AlloJ</h2></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a class="aj-btn" href="#" style="background: #17102A; color: #fff; border-radius: 12px; padding: 8px 12px; text-decoration: none; display: flex; flex-direction: column; line-height: 1.15"><span style="font-size: 11px; font-weight: 600">Télécharger dans</span><span style="font-size: 16px; font-weight: 900">l'App Store</span></a>
+<a class="aj-btn" href="#" style="background: #17102A; color: #fff; border-radius: 12px; padding: 8px 12px; text-decoration: none; display: flex; flex-direction: column; line-height: 1.15"><span style="font-size: 11px; font-weight: 600">Disponible sur</span><span style="font-size: 16px; font-weight: 900">Google Play</span></a>
+</div>
+</section>
+
+<footer style="background: #1E0049; color: #DCD0FA; padding: 28px 16px; display: flex; flex-direction: column; gap: 14px; font-size: 14px; font-weight: 700">
+<span style="font-weight: 900; font-size: 26px; color: #fff; letter-spacing: -1px">alloj</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 18px"><a href="#" style="color: #DCD0FA">Instagram</a><a href="#" style="color: #DCD0FA">TikTok</a><a href="#" style="color: #DCD0FA">YouTube</a><a href="#" style="color: #DCD0FA">WhatsApp</a></div>
+<span style="font-weight: 600">© 2026 AlloJ · Mentions légales · Confidentialité</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":4400}}'>
+class Component extends DCLogic {
+renderVals() {
+const B = '/_blob/';
+const ticker = ["🍕 Golden Pizza vient d'ouvrir", '✈️ Pessah 2027 en ligne', '🎬 Nouvel épisode Alloj Le Live', '🕯️ Allumage 18h42 à Paris', '🎉 Alloj Events'];
+const partenaires = ['Briga Real Estate', 'White and Blue', 'Sarah Tours', 'Kangourou Club', 'King David Prague', 'InterContinental Paris', 'Mike Pictures', 'Beth-Din de Paris'];
+return {
+tickerTwice: ticker.concat(ticker),
+partenairesTwice: partenaires.concat(partenaires),
+rubriques: [
+{ emoji: '🍽️', titre: 'Restos', img: '/images/resto-noilly.jpg' },
+{ emoji: '✈️', titre: 'Voyages', img: '/images/sejour-mykonos.jpg' },
+{ emoji: '🥂', titre: 'Réceptions', img: '/images/live-elegance-traiteur.jpg' },
+{ emoji: '🕍', titre: 'Vie juive', img: '/images/live-synagogue.jpg' },
+{ emoji: '🏡', titre: 'Immobilier', img: '/images/immo-vue-mer.jpg' },
+{ emoji: '🇮🇱', titre: 'Israël', img: '/images/israel-micro.jpg' },
+{ emoji: '🇺🇸', titre: 'USA', img: '/images/usa-kosh.jpg' },
+{ emoji: '🎉', titre: 'Évènements', img: '/images/alloj-events-teaser.jpg' }
+],
+restos: [
+{ emoji: '🍷', nom: 'Gilda', lieu: 'Paris 17e', cert: 'Beth-Din de Paris', type: 'Israélien', img: '/images/gilda.jpg' },
+{ emoji: '🥙', nom: 'Levinsky', lieu: 'Paris 16e', cert: 'Beth-Din de Paris', type: 'Israélien', img: '/images/levinsky.jpg' },
+{ emoji: '🍕', nom: 'Golden Pizza', lieu: 'Les Lilas', cert: 'Rabbinat Loubavitch', type: 'Pizza', img: '/images/golden-pizza.jpg' },
+{ emoji: '🥪', nom: 'LeaHava', lieu: 'Paris 4e', cert: 'Rav Rottenberg', type: 'Sandwicherie', img: '/images/leahava.jpg' }
+],
+sejours: [
+{ emoji: '🍷', nom: 'Pessah 2027', dates: '20 avril → 2 mai 2027', img: '/images/pessah-seder.jpg' },
+{ emoji: '🌿', nom: 'Souccot 2027', dates: '15 → dim. 24 oct. 2027', img: '/images/souccot.jpg' },
+{ emoji: '☀️', nom: 'Été 2027', dates: 'Juillet → août 2027', img: '/images/ete-piscine.jpg' },
+{ emoji: '⛷️', nom: 'Ski 2026-27', dates: 'Décembre → mars', img: '/images/ski.jpg' }
+],
+videos: [
+{ img: '/images/live-tchik-tchak.jpg', titre: 'Tchik Tchak, la nouvelle adresse' },
+{ img: '/images/live-enveloppe.jpg', titre: "« L'enveloppe m'intéresse pas »" },
+{ img: '/images/live-bebe-nature.jpg', titre: '24h avec Bébé Nature' },
+{ img: '/images/live-synagogue.jpg', titre: 'Elle a sauvé cette synagogue' }
+]
+};
+}
+}
+</script>
+</body>
+</html>
