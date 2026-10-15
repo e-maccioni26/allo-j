@@ -77,7 +77,7 @@
     ]
   },
   "annonces": [
-    { "tag": "🏡 IMMOBILIER · NETANYA", "titre": "Projet Vue Mer 2, Park Hayam", "img": "/images/immo-vue-mer.jpg", "alt": "Projet Vue Mer 2 à Park Hayam, Netanya", "object_position": "center 35%" },
+    { "tag": "🏡 IMMOBILIER · NETANYA", "titre": "Projet Vue Mer 2, Park Hayam", "img": "/images/immo-vue-mer.jpg", "alt": "Projet Vue Mer 2 à Park Hayam, Netanya", "object_position": "center 23%" },
     { "tag": "🔑 IMMOBILIER · ISRAËL", "titre": "Devenir propriétaire avec 60 000 €", "img": "/images/immo-60000.jpg", "alt": "Devenir propriétaire en Israël avec 60 000 €", "object_position": "center 30%" }
   ],
   "annonce_cta": {

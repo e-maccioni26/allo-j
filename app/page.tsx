@@ -7,8 +7,8 @@ const Wrap = ({ className = "", children }: { className?: string; children: Reac
   <div className={`mx-auto max-w-[1280px] px-4 md:px-8 ${className}`}>{children}</div>
 );
 
-const Img = ({ src, alt, sizes, className = "", priority }: { src: string; alt: string; sizes: string; className?: string; priority?: boolean }) => (
-  <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className={`object-cover ${className}`} />
+const Img = ({ src, alt, sizes, className = "", priority, style }: { src: string; alt: string; sizes: string; className?: string; priority?: boolean; style?: React.CSSProperties }) => (
+  <Image src={src} alt={alt} fill sizes={sizes} priority={priority} style={style} className={`object-cover ${className}`} />
 );
 
 const Tag = ({ children, className = "bg-violet text-white" }: { children: React.ReactNode; className?: string }) => (
@@ -267,7 +267,7 @@ export default function Page() {
             {annonces.map((a) => (
               <article key={a.titre} className="aj-rv aj-lift aj-zoom flex items-center gap-3 overflow-hidden rounded-2xl border border-bord p-2.5 md:flex-col md:items-stretch md:gap-0 md:rounded-[22px] md:p-0">
                 <div className="relative size-[88px] shrink-0 overflow-hidden rounded-xl md:aspect-[16/10] md:size-auto md:rounded-none">
-                  <Img src={a.img} alt={a.alt} sizes="(max-width:768px) 88px, 420px" className="" />
+                  <Img src={a.img} alt={a.alt} sizes="(max-width:768px) 88px, 420px" style={{ objectPosition: a.object_position }} />
                 </div>
                 <div className="flex flex-col gap-1 md:gap-2 md:p-5">
                   <span className="text-xs font-black tracking-[1px] text-vtxt md:text-[13px]">{a.tag}</span>
