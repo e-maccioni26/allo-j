@@ -45,8 +45,8 @@ button { cursor: default; }
   .aj-zoom:hover .aj-emoji { transform: scale(1.25) rotate(-8deg); }
 }
 @supports (animation-timeline: view()) {
-  .aj-rv { animation: aj-up linear both; animation-timeline: view(); animation-range: entry 5% cover 30%; }
-  .aj-pop { animation: aj-pop linear both; animation-timeline: view(); animation-range: entry 10% cover 30%; }
+  .aj-rv { animation: aj-up linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+  .aj-pop { animation: aj-pop linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
 }
 .noscroll { scrollbar-width: none; }
 .noscroll::-webkit-scrollbar { display: none; }
