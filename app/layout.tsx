@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import home from "@/content/home.json";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700", "800", "900"], variable: "--font-nunito" });
 
@@ -16,7 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={nunito.variable}>
-      <body>{children}</body>
+      <body>
+        <Header shabbat={home.shabbat} />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

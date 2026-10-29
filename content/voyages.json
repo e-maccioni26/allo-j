@@ -1,0 +1,58 @@
+{
+  "_note": "Page Voyage cacher. Les séjours sont des exemples de formats (pas d'offres réelles) : pas de prix ni d'hôtel nommé, tout passe par « Demander un devis ». Dates Pessah et Souccot validées par Elone, les autres à confirmer.",
+  "hero": {
+    "tags": ["✈️ VOYAGE CACHER", "2026 · 2027"],
+    "titre_avant": "les fêtes au soleil,",
+    "titre_surligne": "100 % cacher.",
+    "texte": "Pessah, Souccot, été, ski, croisières : comparez les séjours des organisateurs partenaires et demandez votre devis en un clic.",
+    "img": "/images/sejour-mykonos.jpg",
+    "alt": "Sky Event à Mykonos, août 2026",
+    "bulle": "🌴 Sky Event Mykonos"
+  },
+  "recherche": {
+    "quand": ["Pessah 2027", "Souccot 2027", "Été 2027", "Ski 2026-27"],
+    "ou": ["Toutes destinations", "Israël", "Europe", "Croisière"],
+    "voyageurs": ["2 adultes, 2 enfants", "2 adultes", "Famille nombreuse", "Groupe"]
+  },
+  "categories": [
+    { "id": "pessah", "label": "Pessah", "emoji": "🍷" },
+    { "id": "souccot", "label": "Souccot", "emoji": "🌿" },
+    { "id": "chavouot", "label": "Chavouot", "emoji": "🌾" },
+    { "id": "ete", "label": "Été", "emoji": "☀️" },
+    { "id": "ski", "label": "Hiver & ski", "emoji": "⛷️" },
+    { "id": "croisiere", "label": "Croisières", "emoji": "🛳️" },
+    { "id": "club", "label": "Clubs", "emoji": "🏖️" },
+    { "id": "colonie", "label": "Colonies", "emoji": "🏕️" }
+  ],
+  "calendrier": [
+    { "id": "ski", "emoji": "⛷️", "nom": "Hiver & ski", "dates": "Déc. 2026 → mars 2027", "offres": "Chalets, hôtels, clubs", "img": "/images/ski.jpg" },
+    { "id": "pessah", "emoji": "🍷", "nom": "Pessah", "dates": "20 avril → 2 mai 2027", "offres": "Hôtels club, villas", "img": "/images/pessah-seder.jpg" },
+    { "id": "chavouot", "emoji": "🌾", "nom": "Chavouot", "dates": "10 → 12 juin 2027", "offres": "Week-ends, Israël", "provisoire": true },
+    { "id": "ete", "emoji": "☀️", "nom": "Été", "dates": "Juillet → août 2027", "offres": "Clubs, croisières, colonies", "img": "/images/ete-piscine.jpg" },
+    { "id": "souccot", "emoji": "🌿", "nom": "Souccot", "dates": "15 → dim. 24 oct. 2027", "offres": "Hôtels avec soucca", "img": "/images/souccot.jpg" }
+  ],
+  "sejours": [
+    { "categorie": "pessah", "titre": "Hôtel club en bord de mer", "dates": "20 avril → 2 mai 2027", "tags": ["Pension complète", "Club enfants"], "img": "/images/pessah-seder.jpg", "alt": "Table du Séder de Pessah" },
+    { "categorie": "pessah", "titre": "Palace et Séder privatisé", "dates": "20 avril → 2 mai 2027", "tags": ["Séder", "Spa"], "img": "/images/ete-piscine.jpg", "alt": "Piscine d'un hôtel de luxe" },
+    { "categorie": "pessah", "titre": "Villa privée avec chef", "dates": "Dates à la carte", "tags": ["Chef privé", "Familles"] },
+    { "categorie": "souccot", "titre": "Souccot au soleil", "dates": "15 → dim. 24 oct. 2027", "tags": ["Soucca", "Plage"], "img": "/images/souccot.jpg", "alt": "Table dressée dans une soucca" },
+    { "categorie": "ete", "titre": "Club été en famille", "dates": "Juillet → août 2027", "tags": ["Piscine", "Animations"], "img": "/images/ete-piscine.jpg", "alt": "Piscine bordée de palmiers" },
+    { "categorie": "ete", "titre": "Sky Event Mykonos", "dates": "Août 2026", "tags": ["Événement", "Mer"], "img": "/images/sejour-mykonos.jpg", "alt": "Sky Event à Mykonos", "provisoire": true },
+    { "categorie": "ski", "titre": "Chalet glatt cacher", "dates": "Déc. 2026 → mars 2027", "tags": ["Pistes", "Familles"], "img": "/images/ski.jpg", "alt": "Skieur au-dessus des sommets" },
+    { "categorie": "croisiere", "titre": "Croisière en Méditerranée", "dates": "Sur devis", "tags": ["Escales", "Offices à bord"] },
+    { "categorie": "club", "titre": "Club ados", "dates": "Été 2027", "tags": ["13-17 ans", "Encadrement"] },
+    { "categorie": "colonie", "titre": "Colonie d'été", "dates": "Juillet 2027", "tags": ["6-12 ans", "Plein air"] }
+  ],
+  "colonies": {
+    "tag": "🏕️ COLONIES JUIVES",
+    "titre": "l'été des enfants, entre copains et dans le respect de la cacheroute.",
+    "texte": "Séjours de 6 à 17 ans en France, en Israël et à l'étranger.",
+    "bouton": "Voir les colonies 2027"
+  },
+  "organisateurs": ["White and Blue", "Sarah Tours", "Kangourou Club", "King David Prague"],
+  "cta": {
+    "titre": "Vous organisez un séjour cacher ? Présentez-le à toute la communauté.",
+    "bouton": "Devenir partenaire",
+    "href": "/annonceurs"
+  }
+}

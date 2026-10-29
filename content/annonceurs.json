@@ -1,0 +1,50 @@
+{
+  "_note": "Espace annonceurs (B2B). Chiffres alignés sur la page d'accueil. Champs \"provisoire\": true à confirmer avec AlloJ.",
+  "hero": {
+    "tag": "💜 ESPACE ANNONCEURS",
+    "titre_avant": "Une solution complète pour",
+    "titre_surligne": "booster votre entreprise.",
+    "texte": "Le site, l'appli, Alloj Le Live et les réseaux AlloJ : un seul interlocuteur pour toucher toute la communauté juive, en France et en Israël.",
+    "img": "/images/alloj-events-equipe.jpg",
+    "alt": "L'équipe AlloJ réunie au salon Alloj Events"
+  },
+  "telephone": "01 85 61 27 70",
+  "telephone_href": "tel:+33185612770",
+  "audience": [
+    { "emoji": "👀", "valeur": 600000, "affichage": "600 k", "label": "vues d'Alloj cumulées par mois", "mise_en_avant": true },
+    { "emoji": "📸", "valeur": 44600, "affichage": "44,6 k", "label": "abonnés Instagram @alloj_officiel" },
+    { "emoji": "🎵", "valeur": 67200, "affichage": "67,2 k", "label": "j'aime sur TikTok @alloj.officiel" },
+    { "emoji": "▶️", "valeur": 280, "affichage": "280", "label": "vidéos sur YouTube, 2,1 k abonnés" },
+    { "emoji": "💻", "valeur": 250000, "affichage": "250 k", "label": "visites par mois sur alloj.com", "provisoire": true },
+    { "emoji": "📱", "valeur": 100000, "affichage": "100 k", "label": "téléchargements de l'appli", "provisoire": true }
+  ],
+  "formats": [
+    {
+      "numero": "01", "emoji": "📍", "titre": "Fiche établissement",
+      "texte": "Votre vitrine sur le site et l'appli : photos, horaires, carte, certification, réservations et demandes de devis.",
+      "points": ["Référencement par ville et catégorie", "Réservations et devis en ligne"]
+    },
+    {
+      "numero": "02", "emoji": "🚀", "titre": "Mise en avant",
+      "texte": "Passez devant : bannière en page d'accueil, carrousels « nouveautés », newsletter et notifications de l'appli.",
+      "points": ["Accueil, rubriques et appli", "Idéal avant les fêtes et les saisons"]
+    },
+    {
+      "numero": "03", "emoji": "🎬", "titre": "Reportage vidéo Alloj Le Live", "badge": "🔥 LE PLUS VU", "sombre": true,
+      "texte": "Notre équipe vient tourner chez vous. Format « 24h avec », diffusé sur Instagram, TikTok et YouTube.",
+      "visuels": [
+        { "img": "/images/live-bebe-nature.jpg", "alt": "Reportage 24h avec la crèche Bébé Nature" },
+        { "img": "/images/live-elegance-traiteur.jpg", "alt": "Reportage 24h avec Élégance Traiteur" }
+      ]
+    }
+  ],
+  "partenaires": ["Briga Real Estate", "Isa Group", "White and Blue", "Sarah Tours", "Kangourou Club", "King David Prague", "InterContinental Paris Champs-Élysées", "Château Barthélemy", "Le Moulin de Fourcon", "Mike Pictures", "Bassari", "Halavi", "Rabbinat de France", "Beth-Din de Paris"],
+  "devis": {
+    "tag": "✉️ DEVIS",
+    "titre": "parlons de votre projet.",
+    "texte": "Laissez vos coordonnées, un conseiller AlloJ vous rappelle avec une proposition adaptée.",
+    "secteurs": ["🍽️ Restaurant", "✈️ Voyage / séjour", "🥂 Réception / événementiel", "🏡 Immobilier", "🛍️ Commerce", "Autre"],
+    "bouton": "Recevoir mon devis",
+    "confirmation": "Merci ! 🎉 Un conseiller AlloJ vous rappelle très vite."
+  }
+}

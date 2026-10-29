@@ -1,0 +1,86 @@
+{
+  "_note": "Restaurants de la démo. \"reel\": true = établissement fourni par AlloJ (photo réelle). \"exemple\": true = fiche fictive pour remplir la liste, jamais mise en avant. Les champs listés dans \"provisoire\" sont à confirmer.",
+  "page": {
+    "titre_avant": "restaurants cacher",
+    "titre_surligne": "à Paris.",
+    "recherche_placeholder": "Nom, quartier ou plat…",
+    "cta_pro": {
+      "titre": "Vous tenez un restaurant ? 🍽️",
+      "texte": "Ajoutez votre établissement et recevez vos réservations via AlloJ.",
+      "lien": "Ajouter mon restaurant →",
+      "href": "/annonceurs"
+    }
+  },
+  "filtres": {
+    "certifications": ["Beth-Din de Paris", "Rabbinat Loubavitch", "Rav Rottenberg", "Rav Katz", "Rav Pevzner"],
+    "categories": [
+      { "label": "Viande", "emoji": "🥩" },
+      { "label": "Lait", "emoji": "🧀" }
+    ],
+    "cuisines": [
+      { "label": "Pizza", "emoji": "🍕" },
+      { "label": "Sushi", "emoji": "🍣" },
+      { "label": "Sandwicherie", "emoji": "🥪" },
+      { "label": "Israélien", "emoji": "🥙" },
+      { "label": "Méditerranéen", "emoji": "🫒" }
+    ],
+    "villes": ["Toutes", "Paris", "Les Lilas", "Neuilly-sur-Seine", "Boulogne"],
+    "options": ["Ouvert maintenant", "Livraison Chabbat", "Réservation en ligne"],
+    "tris": ["Les plus consultés", "Nouveautés", "A → Z"]
+  },
+  "restaurants": [
+    {
+      "slug": "gilda", "reel": true, "nouveau": true, "emoji": "🍷",
+      "nom": "Gilda", "ville": "Paris", "lieu": "Paris 17e", "cuisine": "Israélien", "categorie": "Viande",
+      "certification": "Beth-Din de Paris", "ouvert": true, "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 980,
+      "img": "/images/gilda.jpg", "alt": "Salle du restaurant Gilda, banquettes orange et caves à vin",
+      "provisoire": ["lieu", "cuisine", "categorie", "certification", "horaires"]
+    },
+    {
+      "slug": "levinsky", "reel": true, "nouveau": true, "emoji": "🥙",
+      "nom": "Levinsky", "ville": "Paris", "lieu": "Paris 16e", "cuisine": "Israélien", "categorie": "Viande",
+      "certification": "Beth-Din de Paris", "ouvert": true, "livraison_chabbat": true, "reservation_en_ligne": false, "vues": 940,
+      "img": "/images/levinsky.jpg", "alt": "Pitas, frites et salades de Levinsky",
+      "provisoire": ["lieu", "categorie", "horaires"]
+    },
+    {
+      "slug": "golden-pizza", "reel": true, "nouveau": true, "emoji": "🍕",
+      "nom": "Golden Pizza", "ville": "Les Lilas", "lieu": "Les Lilas", "cuisine": "Pizza", "categorie": "Lait",
+      "certification": "Rabbinat Loubavitch", "ouvert": true, "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 1020,
+      "img": "/images/golden-pizza.jpg", "alt": "Pizzas, salade et poké bowl de Golden Pizza",
+      "provisoire": ["certification", "categorie", "horaires"]
+    },
+    {
+      "slug": "leahava", "reel": true, "nouveau": true, "emoji": "🥪",
+      "nom": "LeaHava", "ville": "Paris", "lieu": "Paris 4e", "cuisine": "Sandwicherie", "categorie": "Viande",
+      "certification": "Rav Rottenberg", "ouvert": false, "ouverture": "Ouvre à 12h", "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 870,
+      "img": "/images/leahava.jpg", "alt": "Sandwich garni et salade chez LeaHava",
+      "provisoire": ["lieu", "cuisine", "categorie", "horaires"]
+    },
+    { "slug": "shouk-11", "exemple": true, "emoji": "🧆", "nom": "Shouk 11", "ville": "Paris", "lieu": "Paris 11e", "cuisine": "Israélien", "categorie": "Viande", "certification": "Rav Pevzner", "ouvert": true, "livraison_chabbat": true, "reservation_en_ligne": true, "vues": 610 },
+    { "slug": "cafe-tel-aviv", "exemple": true, "emoji": "🍳", "nom": "Café Tel Aviv", "ville": "Paris", "lieu": "Paris 16e", "cuisine": "Israélien", "categorie": "Lait", "certification": "Rav Katz", "ouvert": true, "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 590 },
+    { "slug": "mezze-club", "exemple": true, "emoji": "🫒", "nom": "Mezzé Club", "ville": "Neuilly-sur-Seine", "lieu": "Neuilly", "cuisine": "Méditerranéen", "categorie": "Viande", "certification": "Rabbinat Loubavitch", "ouvert": true, "ouverture": "Ferme à 23h", "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 540 },
+    { "slug": "osaka-sushi", "exemple": true, "emoji": "🍣", "nom": "Osaka Sushi", "ville": "Paris", "lieu": "Paris 16e", "cuisine": "Sushi", "categorie": "Viande", "certification": "Beth-Din de Paris", "ouvert": true, "livraison_chabbat": true, "reservation_en_ligne": false, "vues": 520 },
+    { "slug": "sabich-bar", "exemple": true, "emoji": "🍆", "nom": "Sabich Bar", "ville": "Paris", "lieu": "Paris 4e", "cuisine": "Israélien", "categorie": "Lait", "certification": "Beth-Din de Paris", "ouvert": true, "livraison_chabbat": false, "reservation_en_ligne": false, "vues": 470 },
+    { "slug": "jaffa-grill", "exemple": true, "emoji": "🍢", "nom": "Jaffa Grill", "ville": "Paris", "lieu": "Paris 19e", "cuisine": "Israélien", "categorie": "Viande", "certification": "Rav Pevzner", "ouvert": true, "livraison_chabbat": true, "reservation_en_ligne": true, "vues": 430 },
+    { "slug": "galil", "exemple": true, "emoji": "🥗", "nom": "Galil", "ville": "Boulogne", "lieu": "Boulogne", "cuisine": "Méditerranéen", "categorie": "Viande", "certification": "Beth-Din de Paris", "ouvert": false, "ouverture": "Ouvre à 19h", "livraison_chabbat": false, "reservation_en_ligne": true, "vues": 390 },
+    { "slug": "pizza-marais", "exemple": true, "emoji": "🍕", "nom": "Pizza du Marais", "ville": "Paris", "lieu": "Paris 3e", "cuisine": "Pizza", "categorie": "Lait", "certification": "Rav Katz", "ouvert": true, "livraison_chabbat": true, "reservation_en_ligne": false, "vues": 350 }
+  ],
+  "fiche_defaut": {
+    "_note": "Contenu commun des fiches pour la démo. À remplacer par les vraies infos de chaque restaurant.",
+    "horaires_exemple": [
+      { "jours": "Dim. → jeu.", "heures": "12h–15h · 19h–23h30" },
+      { "jours": "Vendredi", "heures": "12h–15h" },
+      { "jours": "Samedi", "heures": "Après Chabbat → 0h30" }
+    ],
+    "creneaux": ["19h30", "20h00", "20h30", "21h15"],
+    "couverts": ["2 personnes", "3 personnes", "4 personnes", "6 personnes", "8 personnes et +"],
+    "reportage": {
+      "tag": "🎬 VU DANS ALLOJ LE LIVE",
+      "titre": "Les coulisses des meilleures adresses, en vidéo.",
+      "bouton": "Regarder Alloj Le Live",
+      "img": "/images/live-tournage.jpg",
+      "alt": "Tournage d'Alloj Le Live"
+    }
+  }
+}

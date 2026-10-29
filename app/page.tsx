@@ -1,37 +1,10 @@
 import Image from "next/image";
 import home from "@/content/home.json";
+import restaurantsData from "@/content/restaurants.json";
 import Counter from "@/components/home/Counter";
-import Header from "@/components/home/Header";
+import { Emoji, H2, Img, L, Play, SeeAll, Tag, Wrap } from "@/components/ui";
 
-const Wrap = ({ className = "", children }: { className?: string; children: React.ReactNode }) => (
-  <div className={`mx-auto max-w-[1280px] px-4 md:px-8 ${className}`}>{children}</div>
-);
-
-const Img = ({ src, alt, sizes, className = "", priority, style }: { src: string; alt: string; sizes: string; className?: string; priority?: boolean; style?: React.CSSProperties }) => (
-  <Image src={src} alt={alt} fill sizes={sizes} priority={priority} style={style} className={`object-cover ${className}`} />
-);
-
-const Tag = ({ children, className = "bg-violet text-white" }: { children: React.ReactNode; className?: string }) => (
-  <span className={`flex items-center gap-2 px-2.5 py-1 text-xs font-black tracking-[1.5px] md:px-3.5 md:py-[5px] md:text-[13px] ${className}`}>{children}</span>
-);
-
-const H2 = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <h2 className={`m-0 text-[32px] leading-[1.05] font-black tracking-[-1px] md:text-[length:var(--aj-h2)] md:tracking-[-1.5px] ${className}`}>{children}</h2>
-);
-
-const SeeAll = ({ children }: { children: React.ReactNode }) => (
-  <a className="py-2.5 text-[15px] font-black md:py-3 md:text-base">{children}</a>
-);
-
-const Play = ({ size, className = "" }: { size: number; className?: string }) => (
-  <span className={`aj-pulse flex items-center justify-center rounded-full bg-white/95 ${className}`}>
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="#3E0095" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-  </span>
-);
-
-const Emoji = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <span aria-hidden="true" className={`aj-emoji absolute flex items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(20,0,60,.25)] ${className}`}>{children}</span>
-);
+const slugOf = (nom: string) => restaurantsData.restaurants.find((r) => r.nom === nom)?.slug;
 
 const social = (label: string, svg: React.ReactNode) => (
   <a key={label} className="aj-btn flex size-12 items-center justify-center rounded-full border-2 border-white/45" aria-label={label}>
@@ -42,30 +15,12 @@ const social = (label: string, svg: React.ReactNode) => (
 const carousel = "noscroll -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 md:mx-0 md:grid md:gap-6 md:overflow-visible md:px-0";
 
 export default function Page() {
-  const { shabbat: s, hero, reseaux, ticker, compteurs, rubriques, restaurants, sejours, live, annonces, annonce_cta, partenaires, annonceurs, app } = home;
+  const { hero, reseaux, ticker, compteurs, rubriques, restaurants, sejours, live, annonces, annonce_cta, partenaires, annonceurs, app } = home;
   const tick = [...ticker, ...ticker];
   const parts = [...partenaires, ...partenaires];
 
   return (
     <div className="overflow-hidden">
-      {/* Bandeau Chabbat */}
-      <div className="bg-nuit text-[13px] text-white md:text-sm">
-        <Wrap className="flex justify-between gap-x-6 gap-y-2 py-[9px] md:flex-wrap md:py-2.5">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
-            <span className="font-black text-lilas">🕯️ Chabbat {s.parasha} · {s.ville}</span>
-            <span className="hidden md:inline">Allumage {s.allumage.replace(/ (\d+h\d+)$/, " ")}<strong>{s.allumage.match(/\d+h\d+$/)?.[0]}</strong></span>
-            <span className="hidden md:inline">Sortie {s.sortie.replace(/ (\d+h\d+)$/, " ")}<strong>{s.sortie.match(/\d+h\d+$/)?.[0]}</strong></span>
-            <span className="md:hidden">{s.allumage.match(/\d+h\d+$/)?.[0]} → {s.sortie.match(/\d+h\d+$/)?.[0]}</span>
-          </div>
-          <div className="flex items-center gap-5 font-bold">
-            <a className="!text-white">📍 <span className="md:hidden">Ville</span><span className="hidden md:inline">Changer de ville</span></a>
-            <a className="hidden !text-white md:inline">FR · EN</a>
-          </div>
-        </Wrap>
-      </div>
-
-      <Header />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-violet text-white">
         <span aria-hidden="true" className="aj-float2 absolute -top-[90px] -right-[90px] size-60 rounded-full bg-[#5A1FC0] opacity-60 md:top-[-140px] md:right-auto md:left-[-120px] md:size-[420px] md:opacity-55" />
@@ -150,7 +105,7 @@ export default function Page() {
           <div className="aj-rv flex flex-col items-start gap-2.5 md:gap-3"><Tag>🧭 RUBRIQUES</Tag><H2>on vous trouve tout.</H2></div>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] md:gap-5">
             {rubriques.map((r) => (
-              <a key={r.titre} className="aj-rv aj-lift aj-zoom relative block aspect-square overflow-hidden rounded-[18px] bg-[#E9DFFB] no-underline md:aspect-[4/5] md:rounded-[22px]">
+              <L href={r.href} key={r.titre} className="aj-rv aj-lift aj-zoom relative block aspect-square overflow-hidden rounded-[18px] bg-[#E9DFFB] no-underline md:aspect-[4/5] md:rounded-[22px]">
                 <Img src={r.img} alt={r.alt} sizes="(max-width:768px) 50vw, 300px" />
                 <Emoji className="top-2 left-2 size-[38px] text-[19px] md:top-3.5 md:left-3.5 md:size-[52px] md:text-[26px]">{r.emoji}</Emoji>
                 <span className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-[rgba(20,0,60,.82)] to-transparent" />
@@ -158,7 +113,7 @@ export default function Page() {
                   <span className="bg-white px-2 py-[3px] text-[15px] font-black tracking-[.5px] text-violet uppercase md:px-3 md:py-1 md:text-[22px]">{r.titre}</span>
                   <span className="hidden text-[15px] font-bold text-white md:block">{r.sous} →</span>
                 </span>
-              </a>
+              </L>
             ))}
           </div>
         </Wrap>
@@ -172,7 +127,7 @@ export default function Page() {
               <span className="hidden md:block"><Tag>🔥 NOUVEAUX RESTAURANTS</Tag></span>
               <H2><span className="md:hidden">🔥 </span><span className="md:hidden">nouveaux<br />restaurants.</span><span className="hidden md:inline">les adresses qui viennent d&apos;ouvrir.</span></H2>
             </div>
-            <SeeAll><span className="md:hidden">Voir tout →</span><span className="hidden md:inline">Voir tous les restaurants →</span></SeeAll>
+            <SeeAll href="/restaurants"><span className="md:hidden">Voir tout →</span><span className="hidden md:inline">Voir tous les restaurants →</span></SeeAll>
           </div>
           <div className={`${carousel} md:grid-cols-[repeat(auto-fit,minmax(min(270px,100%),1fr))]`}>
             {restaurants.map((r) => (
@@ -184,14 +139,14 @@ export default function Page() {
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-3.5 md:gap-3 md:p-5">
                   <div>
-                    <h3 className="m-0 text-[19px] font-black md:text-[22px] md:tracking-[-.3px]">{r.nom}</h3>
+                    <h3 className="m-0 text-[19px] font-black md:text-[22px] md:tracking-[-.3px]"><L href={`/restaurants/${slugOf(r.nom)}`} className="!text-encre no-underline">{r.nom}</L></h3>
                     <p className="mt-1 mb-0 text-sm font-bold text-t2 md:text-[15px]">📍 {r.lieu}<span className="md:hidden"> · {r.type}</span></p>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <span className="rounded-full border-2 border-violet px-2.5 py-0.5 text-xs font-extrabold text-violet md:py-[3px] md:text-[13px]">✡︎ {r.certification}</span>
                     <span className="hidden rounded-full bg-chip px-3 py-[5px] text-[13px] font-extrabold text-violet md:inline">{r.type}</span>
                   </div>
-                  <a className="aj-btn mt-auto hidden self-start rounded-full bg-violet px-5 py-3 text-[15px] font-black !text-white no-underline md:block">Réserver une table</a>
+                  <L href={`/restaurants/${slugOf(r.nom)}#reserver`} className="aj-btn mt-auto hidden self-start rounded-full bg-violet px-5 py-3 text-[15px] font-black !text-white no-underline md:block">Réserver une table</L>
                 </div>
               </article>
             ))}
@@ -207,11 +162,11 @@ export default function Page() {
               <span className="hidden md:block"><Tag>✈️ VOYAGE CACHER</Tag></span>
               <H2><span className="md:hidden">✈️ </span><span className="md:hidden">prochains<br />séjours.</span><span className="hidden md:inline">réservez votre prochain séjour.</span></H2>
             </div>
-            <SeeAll><span className="md:hidden">Voir tout →</span><span className="hidden md:inline">Tous les séjours →</span></SeeAll>
+            <SeeAll href="/voyages"><span className="md:hidden">Voir tout →</span><span className="hidden md:inline">Tous les séjours →</span></SeeAll>
           </div>
           <div className={`${carousel} md:grid-cols-[repeat(auto-fit,minmax(min(270px,100%),1fr))]`}>
             {sejours.map((j) => (
-              <a key={j.nom} className="aj-rv aj-lift aj-zoom relative flex aspect-[3/4] shrink-0 basis-60 snap-start flex-col justify-end overflow-hidden rounded-[18px] bg-[#D9C9F6] no-underline md:basis-auto md:rounded-[22px]">
+              <L href="/voyages" key={j.nom} className="aj-rv aj-lift aj-zoom relative flex aspect-[3/4] shrink-0 basis-60 snap-start flex-col justify-end overflow-hidden rounded-[18px] bg-[#D9C9F6] no-underline md:basis-auto md:rounded-[22px]">
                 <Img src={j.img} alt={j.alt} sizes="(max-width:768px) 240px, 320px" />
                 <Emoji className="top-2.5 right-2.5 size-10 text-xl md:top-3.5 md:right-3.5 md:size-[52px] md:text-[26px]">{j.emoji}</Emoji>
                 <span className="relative m-2.5 flex flex-col gap-1 rounded-[14px] bg-white p-3.5 md:m-3.5 md:gap-1.5 md:rounded-2xl md:p-[18px]">
@@ -219,7 +174,7 @@ export default function Page() {
                   <span className="text-[15px] font-black text-encre md:text-[17px]">📅 <span className="md:hidden">{j.dates_courtes}</span><span className="hidden md:inline">{j.dates}</span></span>
                   <span className="hidden text-sm font-bold text-t2 md:block">{j.detail}</span>
                 </span>
-              </a>
+              </L>
             ))}
           </div>
         </Wrap>
@@ -320,7 +275,7 @@ export default function Page() {
             <h2 className="m-0 text-[30px] leading-[1.08] font-black tracking-[-1px] md:text-[clamp(34px,3.8vw,54px)] md:leading-[1.05] md:tracking-[-1.5px]">{annonceurs.titre}</h2>
             <p className="m-0 hidden text-[19px] leading-normal text-surv md:block">{annonceurs.texte}</p>
             <div className="flex w-full flex-col items-center gap-3 md:w-auto md:flex-row">
-              <a className="aj-btn w-full rounded-full bg-white p-[15px] text-center text-[17px] font-black no-underline md:w-auto md:px-[26px] md:py-4">Demander un devis</a>
+              <L href="/annonceurs" className="aj-btn w-full rounded-full bg-white p-[15px] text-center text-[17px] font-black no-underline md:w-auto md:px-[26px] md:py-4">Demander un devis</L>
               <a className="w-full p-2 text-center text-[17px] font-black !text-white md:w-auto md:px-2 md:py-4">📞 {annonceurs.telephone}</a>
             </div>
           </div>
@@ -346,34 +301,6 @@ export default function Page() {
           </div>
         </Wrap>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-nuit text-surn">
-        <Wrap className="flex flex-col gap-3.5 py-7 text-sm font-bold md:gap-10 md:pt-16 md:pb-8 md:text-[15px]">
-          <div className="grid gap-8 md:grid-cols-[repeat(auto-fit,minmax(min(200px,100%),1fr))]">
-            <div className="flex flex-col gap-3.5">
-              <span className="flex items-center gap-2.5">
-                <Image className="hidden h-11 w-auto rounded-xl bg-white p-1 md:block" src="/images/picto-alloj.png" alt="" width={90} height={90} />
-                <span className="text-[26px] font-black tracking-[-1px] text-white md:text-[30px]">alloj</span>
-              </span>
-              <p className="m-0 hidden leading-normal font-bold md:block">Le guide de la vie juive, en France, en Israël et dans le monde.</p>
-            </div>
-            {[
-              ["Rubriques", ["Restaurants", "Voyages", "Réceptions", "Vie juive", "Immobilier"]],
-              ["AlloJ", ["Alloj Le Live", "Alloj Events", "Annonceurs", "Ajouter mon établissement", annonceurs.telephone]],
-              ["Suivez-nous", ["Instagram", "TikTok", "YouTube", "WhatsApp", "Facebook"]],
-            ].map(([t, links]) => (
-              <nav key={t as string} aria-label={t as string} className={`flex-col gap-2.5 ${t === "Suivez-nous" ? "flex max-md:flex-row max-md:flex-wrap max-md:gap-x-[18px] max-md:gap-y-2" : "hidden md:flex"}`}>
-                <span className="hidden font-black text-white md:block">{t as string}</span>
-                {(links as string[]).map((l) => <a key={l} className="!text-surn">{l}</a>)}
-              </nav>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-sm font-semibold md:border-t md:border-white/15 md:pt-[22px]">
-            <span>© 2026 AlloJ</span><a className="!text-surn">Mentions légales</a><a className="!text-surn">Confidentialité</a><a className="hidden !text-surn md:inline">Cookies</a>
-          </div>
-        </Wrap>
-      </footer>
     </div>
   );
 }

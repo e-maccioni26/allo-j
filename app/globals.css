@@ -19,8 +19,11 @@
 }
 
 body { margin: 0; font-family: var(--aj-font); color: var(--aj-encre); background: #fff; overflow-x: hidden; }
-a { color: var(--aj-violet); cursor: default; }
-button { cursor: default; }
+a { color: var(--aj-violet); }
+a:not([href]) { cursor: default; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--aj-violet-vif); outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 .aj-up { animation: aj-up .8s var(--aj-ease) both; }
@@ -50,3 +53,12 @@ button { cursor: default; }
 }
 .noscroll { scrollbar-width: none; }
 .noscroll::-webkit-scrollbar { display: none; }
+
+.aj-pop-now { animation: aj-pop .35s var(--aj-ease) both; }
+@keyframes aj-confetti { from { transform: translateY(-20px) rotate(0); opacity: 1 } to { transform: translateY(260px) rotate(360deg); opacity: 0 } }
+.aj-confetti { position: absolute; top: 0; animation: aj-confetti 2.2s ease-in forwards; pointer-events: none; }
+.aj-field { font: inherit; font-size: 16px; padding: 13px 14px; border: 2px solid #D8CCF2; border-radius: 12px; color: var(--aj-encre); background: #fff; width: 100%; }
+.aj-field[aria-invalid="true"] { border-color: #C0262D; }
+.aj-chip { border: 2px solid #D8CCF2; background: #fff; color: var(--aj-encre); font: inherit; font-weight: 800; font-size: 14px; padding: 8px 14px; border-radius: 999px; min-height: 44px; }
+.aj-chip[aria-pressed="true"] { border-color: var(--aj-violet); background: var(--aj-violet); color: #fff; }
+dialog::backdrop { background: rgba(20, 0, 60, .6); }
